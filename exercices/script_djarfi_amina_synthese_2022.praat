@@ -4,17 +4,17 @@
 
 clearinfo
 
-son = Read from file: "faure.wav"
-grille = Read from file: "faure.TextGrid"
+son = Read from file: "logatomes\faure.wav"
+grille = Read from file: "logatomes\faure.TextGrid"
 
 
 
 ###########################
 #recuperer les lignes et synthetiser le mot vodka a partir de l'orthographe
 
-mot_ortho$ = "vodka"
+mot_ortho$ = "femme"
 
-table_complete = Read Table from tab-separated file: "dico1.txt"
+table_complete = Read Table from tab-separated file: "dico2_sampa_ameliore.txt"
 
 extraction = Extract rows where column (text): "orthographe", "is equal to", mot_ortho$
 
@@ -30,7 +30,7 @@ son_vide = Create Sound from formula: "sineWithNoise", 1, 0, 0.01, 44100, "0"
 
 #################################
 
-mot_phonetique$ = "vodka"
+#mot_phonetique$ = "femme"
 
 longueur_mot = length(mot_phonetique$)
 
@@ -90,13 +90,6 @@ for intervalle from 1 to nbr_intervals-1
 
 		#printline 'm1:3'  et 'm2:3'
 
-
-
-
-
-To PointProcess (zeroes): 1, "no", "yes"
-Get nearest index: 9.687
-Get time from index: 8662
 
 
 
